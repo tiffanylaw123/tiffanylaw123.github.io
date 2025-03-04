@@ -4,16 +4,25 @@ html{
     margin: 0;
 }
 
+/* css for welcome page */
 .welcome-page{
     display: flex;
+}
+.welcome-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    margin: 20px;
 }
 .home-page{
     display: flex;
 }
+
+/* css for sidebar on each page */
 .sidebar{
     width: 120px;
     height: 55vh;
-    background-color:#889696;
     display: flex;
     flex-direction: column;
     padding-top: 0px;
@@ -45,12 +54,19 @@ html{
     font-weight: 900;
     font-style: oblique;
 }
-.welcome-image {
+
+/* css for content on home page */
+.mini-profiles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+    margin-left: 0px;    
+    justify-content: space-evenly;
+}
+.mini {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    width: 100%; 
-    margin: 20px;
 }
 .individuals {
     text-align: center;
@@ -59,8 +75,9 @@ html{
     margin: 0;
     padding: 0;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    width: 400px;
+    height: 300px;
+    margin-left: 90px;
 }
 .individual-details {
     display: inline-block;
@@ -69,15 +86,13 @@ html{
     text-align: center;
     padding: 5px;
     width: 250px;
-    margin: -4px auto 0; /* Negative top margin to close the gap */
+    margin: 5px auto 0;
 }
 
+/* css for image, short description & spotify on each profile page */
 .profile{
     display: flex;
 }
-/* .friend{
-    text-align: center;
-} */
 .image-description {
     display: flex;
     flex-direction: row;
@@ -87,11 +102,10 @@ html{
     height: 100vh;
     max-height: 400px;
     margin: 0 20px;
-    overflow-y: auto;
+    overflow: hidden;
 }
 .bio1{
     align-items: flex-start;
-    margin-top: -150px;
 }
 .bio2{
     display: inline-block;
@@ -105,6 +119,9 @@ html{
     margin-top: 5px;
 }
 
+
+
+/* css for sub buttons on each profile page */
 .sub-buttons{
     margin: auto;
     display: flex;
@@ -112,4 +129,115 @@ html{
     align-items: center;
     justify-content: space-evenly;
     margin-top: 20px;
+}
+.border-box{
+    padding: 10px 10px;
+    border-image: var(--border-gradient);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+    /* animation: rollIn;
+    animation-duration: 3s; */
+    border-color: #b8bdb5;
+}
+.sub-buttons a{
+    margin: 20px 0;
+    color: #5f7470;
+    background-color: #b8bdb5;
+    text-decoration: none;
+    width: 200px;
+    text-align: center;
+    font-family: "Lora", cursive;
+    font-size: 25px;
+}
+.sub-buttons a:hover{
+    text-decoration: underline;
+    /* animation: rollOut;
+    animation-duration: 4s; */
+}
+
+
+/* code to flip image when tapping */
+.category {
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 1000px;
+}
+.category h2 {
+    text-align: center;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+    margin-left: 150px;
+    justify-content: space-evenly;
+}
+.flip-container {
+    perspective: 1000px;
+}
+.flipper {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+.flipper img, .flipper .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border: 2px solid #6e7e7e;
+    box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.front {
+    transform: rotateY(0deg);
+}
+.back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #889696;
+    color: whitesmoke;
+    transform: rotateY(180deg);
+    padding: 20px;
+    box-sizing: border-box;
+}
+.flip-container.flip .flipper {
+    transform: rotateY(180deg);
+}
+
+
+/* css for back to top button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #b8bdb5;
+    color: #5f7470;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: "Libre Franklin", sans-serif;
+}
+.back-to-top .arrow {
+    font-size: 20px;
+}
+.back-to-top .text {
+    margin-left: 10px;
+    font-size: 16px;
+    display: none;
+}
+.back-to-top:hover {
+    width: 150px;
+}
+.back-to-top:hover .text {
+    display: inline;
 }
