@@ -75,8 +75,8 @@ html{
     margin: 0;
     padding: 0;
     display: block;
-    width: 400px;
-    height: 300px;
+    max-width: 300px;
+    max-height: 300px;
     margin-left: 90px;
 }
 .individual-details {
@@ -86,7 +86,8 @@ html{
     text-align: center;
     padding: 5px;
     width: 250px;
-    margin: 5px auto 0;
+    margin: 10px auto 0;
+    margin-left: 110px;
 }
 
 /* css for image, short description & spotify on each profile page */
@@ -117,8 +118,8 @@ html{
     height: 380px;
     margin-left: 20px;
     margin-top: 5px;
+    font-size: 25px;
 }
-
 
 
 /* css for sub buttons on each profile page */
@@ -136,8 +137,8 @@ html{
     border-width: 1px;
     border-style: solid;
     border-radius: 10px;
-    /* animation: rollIn;
-    animation-duration: 3s; */
+    animation: lightSpeedInLeft;
+    animation-duration: 2s;
     border-color: #b8bdb5;
 }
 .sub-buttons a{
@@ -152,8 +153,12 @@ html{
 }
 .sub-buttons a:hover{
     text-decoration: underline;
-    /* animation: rollOut;
-    animation-duration: 4s; */
+}
+.sub-buttons iframe{
+    justify-content: center;
+    margin-top: 10px;
+    animation: bounceInDown;
+    animation-duration: 2s;
 }
 
 
@@ -162,6 +167,7 @@ html{
     margin-bottom: 40px;
     width: 100%;
     max-width: 1000px;
+    font-size: 30px;
 }
 .category h2 {
     text-align: center;
