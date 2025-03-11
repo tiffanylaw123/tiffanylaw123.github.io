@@ -19,12 +19,15 @@ html{
 }
 .next-button {
     margin-top: 30px;
-    padding: 10px 30px;
+    padding: 15px 20px;
+    text-decoration: none;
     background-color: #5f7470;
     color: #b8bdb5;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 50px;
+    margin: 5px 5px;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: 900;
+    font-style: oblique;
 }
 .next-button:hover {
     background-color: #b8bdb5;
