@@ -2,6 +2,7 @@ html{
     font-family: serif;
     background: #889696;
     margin: 0;
+    overflow-x: hidden;
 }
 
 /* css for welcome page */
@@ -10,10 +11,25 @@ html{
 }
 .welcome-image {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%; 
     margin: 20px;
+}
+.next-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #5f7470;
+    color: #b8bdb5;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 20px;
+    /* transition: background-color 0.3s; */
+}
+.next-button:hover {
+    background-color: #b8bdb5;
+    color: #5f7470;
 }
 .home-page{
     display: flex;
@@ -246,4 +262,37 @@ html{
 }
 .back-to-top:hover .text {
     display: inline;
+}
+
+@media (max-width: 767px) {
+    .mini-profiles {
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+    }
+    .image-description {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        max-height: none;
+    }
+    .bio2 {
+        width: 100%;
+        max-width: 70vw;
+        margin-left: 0;
+    }
+    .sub-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .sub-buttons a {
+        width: 200px;
+    }
+    .sub-buttons iframe {
+        width: 60%;
+    }
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        margin-left: 60px;
+    }
 }
