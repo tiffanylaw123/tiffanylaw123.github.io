@@ -18,14 +18,13 @@ html{
     margin: 20px;
 }
 .next-button {
-    margin-top: 20px;
-    padding: 10px 20px;
+    margin-top: 30px;
+    padding: 10px 30px;
     background-color: #5f7470;
     color: #b8bdb5;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 20px;
-    /* transition: background-color 0.3s; */
+    font-size: 50px;
 }
 .next-button:hover {
     background-color: #b8bdb5;
